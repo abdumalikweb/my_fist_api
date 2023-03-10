@@ -1,7 +1,7 @@
 let post = document.querySelector(".posts");
 function getPost({ title, completed }) {
   return `
-  <div class="col-md-4">
+  <div class="col">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title card_title">${title}</h5>
