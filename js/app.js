@@ -44,7 +44,11 @@ function saveId(id) {
 }
 
 async function getDate() {
-  users.innerHTML = "...loading...";
+  users.innerHTML = `<div class="text-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>`;
   let res = await fetch("https://jsonplaceholder.typicode.com/users");
   let data = await res.json();
   users.innerHTML = " ";

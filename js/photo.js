@@ -17,7 +17,11 @@ function getPost({ title, url, thumbnailUrl }) {
 
 async function getDate() {
   let postId = localStorage.getItem("users");
-  post.innerHTML = "...loading...";
+  post.innerHTML = `<div class="text-center">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>`;
   let res = await fetch(
     `https://jsonplaceholder.typicode.com/albums/${postId}/photos`
   );
